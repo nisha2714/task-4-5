@@ -1,38 +1,101 @@
-.App {
+/* Styles for the DataGrid component */
+.data-grid-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.data-grid-container h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.data-grid-container .filter-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.data-grid-container .filter-section .MuiTextField-root {
+  flex: 1;
+}
+
+.MuiDataGrid-root {
+  border: 1px solid #ddd;
+}
+
+.MuiDataGrid-cell,
+.MuiDataGrid-columnHeader {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.MuiDataGrid-row {
+  background-color: white;
+}
+
+.MuiDataGrid-row:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.MuiDataGrid-row:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+
+.MuiDataGrid-footerContainer {
+  background-color: #f0f0f0;
+}
+
+/* Style for table header */
+.MuiDataGrid-columnHeaderTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Custom padding for table cells */
+.MuiDataGrid-cell {
+  padding: 8px;
+}
+
+/* Style for the filter inputs */
+.filter-section {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-section input {
+  padding: 5px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-section input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons and Action styles */
+button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0056b3;
 }
